@@ -9,6 +9,8 @@ TagManager:
   - DEATH
   - SPAWNPOINT
   - TP
+  - Enemy
+  - ENEMYSPAWNPOINT
   layers:
   - Default
   - TransparentFX

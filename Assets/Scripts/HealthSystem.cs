@@ -12,6 +12,7 @@ public class HealthSystem : MonoBehaviour
 
     [SerializeField] private bool hasHealthTxt;
 
+
     [SerializeField] private UnityEvent onHealthAdded = new UnityEvent();
     [SerializeField] private UnityEvent onDamageTaken = new UnityEvent();
     [SerializeField] private UnityEvent onDie = new UnityEvent();

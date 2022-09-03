@@ -25,10 +25,13 @@ public class Gun : MonoBehaviour
     [SerializeField] private int maxAmmo = 50;
     [SerializeField] private Text ammoTxt;
 
+    private Wallet wallet;
+
     private float LastShootTime;
 
     private void Awake()
     {
+        wallet = GetComponent<Wallet>();
         ammo = maxAmmo;
     }
 
@@ -53,6 +56,9 @@ public class Gun : MonoBehaviour
                 StartCoroutine(SpawnTrail(trail, hit.point, hit.normal, true));
 
                 if(hit.transform.gameObject.GetComponent<HealthSystem>()) hit.transform.gameObject.GetComponent<HealthSystem>().TakeDamage(dmg);
+
+                if(hit.transform.tag == "Enemy")
+                    wallet.AddCredits(2);
 
                 LastShootTime = Time.time;
             }

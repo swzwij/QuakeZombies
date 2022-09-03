@@ -9,7 +9,7 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] private float distanceAway;
 
     private Transform thisOjb;
-    private Transform _target;
+    public Transform _target;
 
     private NavMeshAgent _nav;
 

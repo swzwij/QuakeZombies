@@ -22,5 +22,6 @@ public class Respawn : MonoBehaviour
         characterController.enabled = false;
         player.transform.position = spawnPoints[a].transform.position;
         characterController.enabled = true;
+        player.GetComponent<HealthSystem>().AddHealth(100);
     }
 }
