@@ -11,6 +11,7 @@ TagManager:
   - TP
   - Enemy
   - ENEMYSPAWNPOINT
+  - PerkMachine
   layers:
   - Default
   - TransparentFX

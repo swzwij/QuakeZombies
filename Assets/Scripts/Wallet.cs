@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Wallet : MonoBehaviour
 {
     [SerializeField] private Text creditTxt;
-    private int credits;
+    [SerializeField] private int credits;
 
     public int Credits => credits;
 

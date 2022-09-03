@@ -62,6 +62,8 @@ public class PlayerMovement : MonoBehaviour
 
     private Cmd _cmd;
 
+    public bool hasSpeedPerk;
+
     private void Start()
     {
         Cursor.visible = false;
@@ -325,6 +327,12 @@ public class PlayerMovement : MonoBehaviour
 
         _playerVelocity.x += accelspeed * wishdir.x;
         _playerVelocity.z += accelspeed * wishdir.z;
+    }
+
+    public void AddPerk()
+    {
+        moveSpeed *= 1.25f;
+        hasSpeedPerk = true;
     }
 
     private void UpdateUI()
