@@ -115,4 +115,9 @@ public class Gun : MonoBehaviour
             Destroy(other.gameObject);
         }
     }
+
+    public void AddPerk()
+    {
+        dmg *= 1.5f;
+    }
 }

@@ -11,7 +11,6 @@ public class HealthSystem : MonoBehaviour
     [SerializeField] private Text healthText;
 
     [SerializeField] private bool hasHealthTxt;
-    public bool hasHealthPerk;
 
     [SerializeField] private UnityEvent onHealthAdded = new UnityEvent();
     [SerializeField] private UnityEvent onDamageTaken = new UnityEvent();
@@ -92,6 +91,6 @@ public class HealthSystem : MonoBehaviour
     {
         _maxHealth *= 1.5f;
         health = _maxHealth;
-        hasHealthPerk = true;
+        print("added perk");
     }
 }
